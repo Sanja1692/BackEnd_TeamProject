@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg some">
+  <div class="container-fluid rok">
+    <button class="navbar-toggler tblu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"><img class="plss" src="{{ asset('pictures/navbu.png') }}"></span>
+    </button>
+    <div class="collapse navbar-collapse text-center" id="navbarTogglerDemo02">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 mig">
+        <li class="nav-item lime">
+          <a class="nav-link holl" href="/">Home</a>
+        </li>
+        <li class="nav-item lime">
+          <a class="nav-link holl" href="/home">User Area</a>
+        </li>
+        {% if is_granted("ROLE_ADMIN") %}
+         <li class="nav-item lime">
+          <a class="nav-link holl" href="/admin">Admin Area</a>
+        </li>
+        {% endif %} 
+        {# <li class="nav-item lime">
+          <a class="nav-link holl" href="#">Disabled</a>
+        </li> #}
+      </ul>
+      <form class="d-flex llimme">
+        {% if not is_granted("ROLE_USER") %}
+         <a class="eddt btn btn-outline-success" href="/login">Login</a>
+        {% endif %}  
+          {% if is_granted("ROLE_USER") %}
+         <a class="eddt btn btn-outline-success" href="/logout">Logout</a>
+         {% endif %}  
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+
+

@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+{% block title %}Jungle food{% endblock %}
+
+
+{% block body %}
+        {% include "components/navbar.html.twig" %}
+
+
+<div class="d-flex align-items-center split justify-content-center">
+   
+
+<main class="form-signin text-center">
+
+
+  <h1 class="h3 mb-3 fw-normal">Create new Recipes</h1>
+
+    {{ include('users/_form.html.twig') }}
+
+    <a href="{{ path('app_users_index') }}">Back to list</a>
+
+</main>
+
+</div>
+{% endblock %}

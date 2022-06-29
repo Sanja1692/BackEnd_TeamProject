@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Users index{% endblock %}
+
+{% block body %}
+        {% include "components/navbar.html.twig" %}
+
+ <div class="split nsl">
+ <div class="nsl"></div>
+ <div class="nsl"></div>
+ <div class="nsl"></div>
+    <div class="container usrs">
+    <h1>Users index</h1>
+
+    <table class="table fourc tblu">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Email</th>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Picture</th>
+                <th>Blocked</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.fname }}</td>
+                <td>{{ user.lname }}</td>
+                <td class="usrimg"><img class="usrimg" src="{{asset('pictures/' ~ user.picture)}}"></td>
+                <td>{{ user.blocked }}</td>
+                <td>
+                    <a class="lnko" href="{{ path('app_users_show', {'id': user.id}) }}">Show</a>
+                    <a class="lnko" href="{{ path('app_users_edit', {'id': user.id}) }}">Edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="10">No records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    </div>
+    <a href="{{ path('app_users_new') }}">Create new</a>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Jungle food!{% endblock %}
+
+
+{% block body %}
+        {% include "components/navbar.html.twig" %}
+
+
+<div class="d-flex align-items-center split justify-content-center">
+   
+
+<main class="form-signin text-center">
+
+
+
+  <h1 class="h3 mb-3 fw-normal">Edit Recipes</h1>
+
+    {{ include('recipes/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a class="usrbtn2 wdthb" href="{{ path('app_recipes_index') }}">Back to list</a>
+
+    {{ include('recipes/_delete_form.html.twig') }}
+
+
+</main>
+
+</div>
+{% endblock %}

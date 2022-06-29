@@ -1,0 +1,252 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Jungle food!{% endblock %}
+
+{% block body %}
+        {% include "components/navbar.html.twig" %}
+ 
+  <div class="captionfilt">
+    <div class="titles">
+    <h1 class="titles text-left">Hello {{user.fname}}</h1> 
+    </div>
+  </div>
+
+  <div class="container nsl usrbtn">
+    <div class="row justify-content-center ">
+    <a class="col-2 text-center align-items-center" href="/home/recipes">Your own recipes</a>
+    <a class="col-2 text-center align-items-center" href="/home/allrecipes">Add Recipe to Planner</a>
+
+    </div>
+
+  </div>
+ 
+ 
+ 
+
+<h1 class="text-center nsl nsl2">Your weekly Planner</h1>
+{% for message in app.flashes('notice') %}
+   <div class="alert alert-success">
+    {{ message }}
+   </div>
+{% endfor %}
+
+
+{% for day in week %}
+
+  <div class="container nsl">
+    <div class="row justify-content-center "> 
+<button type="button" class="btn usrbtn2 col-lg-4 col-md-6 col-sm-12" data-bs-toggle="modal" data-bs-target="#{{day}}">
+  {{ day }}
+</button> 
+
+    </div>
+
+  </div>
+  
+{% endfor %}
+
+ {% set i = 0 %}
+    <div class="modal fade toop" id="Monday" tabindex="-1" aria-labelledby="MondayLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="MondayLabel">Monday</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body row d-flex justify-content-center text-center">
+{% for meal in mealplanbyuser %}
+ {% if meal.datum == "Monday"%}
+        <div class="card" style="width: 25rem;">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+    <h5>{{ meal.time }}</h5>
+    <p>{{meal.fkrecipes.name}}</p>
+    <a href="/details/{{meal.fkrecipes.id}}" class="card-link usrbtn3">Details</a>
+    <a href="/delete/{{meal.id}}" class="card-link usrbtn3">Delete</a>
+    <a href="/home/edit/{{meal.id}}" class="card-link usrbtn3">Edit</a>
+    </li>
+    </div>
+{% set i = i +1 %}
+{% endif %}
+{% endfor %}
+</div>
+    </div>
+  </div>
+</div>
+
+ {% set i = 0 %}
+    <div class="modal fade toop" id="Tuesday" tabindex="-1" aria-labelledby="TuesdayLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="TuesdayLabel">Tuesday</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body row d-flex justify-content-center text-center">
+{% for meal in mealplanbyuser %}
+ {% if meal.datum == "Tuesday"%}
+        <div class="card" style="width: 25rem;">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+    <h5>{{ meal.time }}</h5>
+    <p>{{meal.fkrecipes.name}}</p>
+    <a href="/details/{{meal.fkrecipes.id}}" class="card-link usrbtn3">Details</a>
+    <a href="/delete/{{meal.id}}" class="card-link usrbtn3">Delete</a>
+    <a href="/home/edit/{{meal.id}}" class="card-link usrbtn3">Edit</a>
+    </li>
+    </div> 
+{% set i = i +1 %}
+{% endif %}
+{% endfor %}
+</div>
+    </div>
+  </div>
+</div>
+
+{% set i = 0 %}
+    <div class="modal fade toop" id="Wednesday" tabindex="-1" aria-labelledby="WednesdayLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="WednesdayLabel">Wednesday</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body row d-flex justify-content-center text-center">
+{% for meal in mealplanbyuser %}
+ {% if meal.datum == "Wednesday"%}
+        <div class="card" style="width: 25rem;">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+    <h5>{{ meal.time }}</h5>
+    <p>{{meal.fkrecipes.name}}</p>
+    <a href="/details/{{meal.fkrecipes.id}}" class="card-link usrbtn3">Details</a>
+    <a href="/delete/{{meal.id}}" class="card-link usrbtn3">Delete</a>
+    <a href="/home/edit/{{meal.id}}" class="card-link usrbtn3">Edit</a>
+    </li>
+    </div> 
+{% set i = i +1 %}
+{% endif %}
+{% endfor %}
+</div>
+    </div>
+  </div>
+</div>
+
+{% set i = 0 %}
+    <div class="modal fade toop" id="Thursday" tabindex="-1" aria-labelledby="ThursdayLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ThursdayLabel">Thursday</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body row d-flex justify-content-center text-center">
+{% for meal in mealplanbyuser %}
+ {% if meal.datum == "Thursday"%}
+        <div class="card" style="width: 25rem;">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+    <h5>{{ meal.time }}</h5>
+    <p>{{meal.fkrecipes.name}}</p>
+    <a href="/details/{{meal.fkrecipes.id}}" class="card-link usrbtn3">Details</a>
+    <a href="/delete/{{meal.id}}" class="card-link usrbtn3">Delete</a>
+    <a href="/home/edit/{{meal.id}}" class="card-link usrbtn3">Edit</a>
+    </li>
+    </div> 
+{% set i = i +1 %}
+{% endif %}
+{% endfor %}
+</div>
+    </div>
+  </div>
+</div>
+
+{% set i = 0 %}
+    <div class="modal fade toop" id="Friday" tabindex="-1" aria-labelledby="FridayLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="FridayLabel">Friday</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body row d-flex justify-content-center text-center">
+{% for meal in mealplanbyuser %}
+ {% if meal.datum == "Friday"%}
+        <div class="card" style="width: 25rem;">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+    <h5>{{ meal.time }}</h5>
+    <p>{{meal.fkrecipes.name}}</p>
+    <a href="/details/{{meal.fkrecipes.id}}" class="card-link usrbtn3">Details</a>
+    <a href="/delete/{{meal.id}}" class="card-link usrbtn3">Delete</a>
+    <a href="/home/edit/{{meal.id}}" class="card-link usrbtn3">Edit</a>
+    </li>
+    </div> 
+{% set i = i +1 %}
+{% endif %}
+{% endfor %}
+</div>
+    </div>
+  </div>
+</div>
+
+{% set i = 0 %}
+    <div class="modal fade toop" id="Saturday" tabindex="-1" aria-labelledby="SaturdayLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="SaturdayLabel">Saturday</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body row d-flex justify-content-center text-center">
+{% for meal in mealplanbyuser %}
+ {% if meal.datum == "Saturday"%}
+        <div class="card" style="width: 25rem;">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+    <h5>{{ meal.time }}</h5>
+    <p>{{meal.fkrecipes.name}}</p>
+    <a href="/details/{{meal.fkrecipes.id}}" class="card-link usrbtn3">Details</a>
+    <a href="/delete/{{meal.id}}" class="card-link usrbtn3">Delete</a>
+    <a href="/home/edit/{{meal.id}}" class="card-link usrbtn3">Edit</a>
+    </li>
+    </div> 
+{% set i = i +1 %}
+{% endif %}
+{% endfor %}
+</div>
+    </div>
+  </div>
+</div>
+
+{% set i = 0 %}
+    <div class="modal fade toop" id="Sunday" tabindex="-1" aria-labelledby="SundayLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="SundayLabel">Sunday</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body row d-flex justify-content-center text-center">
+{% for meal in mealplanbyuser %}
+ {% if meal.datum == "Sunday"%}
+        <div class="card" style="width: 25rem;">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+    <h5>{{ meal.time }}</h5>
+    <p>{{meal.fkrecipes.name}}</p>
+    <a href="/details/{{meal.fkrecipes.id}}" class="card-link usrbtn3">Details</a>
+    <a href="/delete/{{meal.id}}" class="card-link usrbtn3">Delete</a>
+    <a href="/home/edit/{{meal.id}}" class="card-link usrbtn3">Edit</a>
+    </li>
+    </div> 
+{% set i = i +1 %}
+{% endif %}
+{% endfor %}
+</div>
+    </div>
+  </div>
+</div>
+
+  
+{% endblock %}

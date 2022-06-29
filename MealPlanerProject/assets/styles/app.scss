@@ -1,0 +1,820 @@
+@import url("bootstrap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Style+Script&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+$one: #24b273;
+$two: #2dea8f;
+$tree: #167a8b;
+$four: #f9ed69;
+* {
+    max-width: 100%;
+}
+
+.some {
+    height: 8rem;
+    position: absolute;
+    width: 100%;
+    max-width: 100%;
+    color: #f9ed69;
+    //background-image: linear-gradient(-40deg,  transparent,  $one);
+}
+
+.collapse {
+    margin-left: 6rem;
+    margin-right: 6rem;
+}
+
+.caption {
+    background-image: url("../../public/pictures/unnamed-1.jpg");
+    width: 100% auto;
+    height: 45rem;
+    max-width: 100%;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.caption h1 {
+    color: $two;
+    font-size: 4.8rem;
+    font-weight: 700;
+    letter-spacing: .3rem;
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Style Script', cursive;
+}
+
+.caption h2 {
+    color: $one;
+    font-size: 3.8rem;
+    font-weight: 700;
+    letter-spacing: .3rem;
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Style Script', cursive;
+}
+
+.caption h5 {
+    color: $tree;
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: .3rem;
+    position: absolute;
+    top: 55%;
+    left: 25%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Style Script', cursive;
+}
+
+.tilleft {
+    position: absolute;
+    top: 20%;
+    right: 250px;
+    border-radius: 30px;
+}
+
+.titimg {
+    width: 17rem;
+    height: 17rem;
+}
+
+.soorc {
+    width: 23rem;
+    height: 17rem;
+    border-radius: 0 20px;
+    border: solid 1px rgba(241, 0, 0, 0);
+    box-shadow: 2px 5px 5px $one;
+    padding: 0.1rem;
+    background-color: $one;
+    background-size: cover;
+}
+
+.mig {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    top: 0;
+}
+
+.holl {
+    padding: 0.3rem;
+    color: $four;
+}
+
+.holl:hover {
+    color: $four;
+}
+
+.lime {
+    margin: 0.5rem;
+    border-radius: 20px;
+    width: 7rem;
+    border: solid 3px $one;
+    background-color: $one;
+}
+
+.lime:hover,
+.lime:active {
+    margin: 0.5rem;
+    border-radius: 20px;
+    border: solid 3px $tree;
+    background-color: $one;
+}
+
+.gool {
+    height: 2000px;
+    background-color: $four;
+}
+
+.nsl {
+    padding-top: 2rem;
+}
+
+.nsl2 {
+    padding-bottom: 2rem;
+}
+
+.ev {
+    font-size: 3rem;
+    color: $one;
+}
+
+.bor {
+    background-color: $one;
+    width: 300px;
+    height: 300px;
+}
+
+.lnko {
+    text-decoration: none;
+    color: $one;
+}
+
+.lnko:hover {
+    text-decoration: none;
+    color: $four;
+}
+
+.dit {
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+
+.boox {
+    width: 200px;
+    height: 200px;
+}
+
+.eddt,
+.eddt:hover {
+    color: $two;
+    text-decoration: none;
+}
+
+.im-size {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    border: solid 1px rgba(241, 0, 0, 0);
+    box-shadow: 2px 5px 5px $one;
+    padding: 0.2rem;
+    background-size: cover;
+}
+
+.boox2 {
+    width: 400px;
+    height: 200px;
+}
+
+.im-size2 {
+    width: 400px;
+    height: 200px;
+    border-radius: 0 20px;
+    border: solid 1px rgba(241, 0, 0, 0);
+    box-shadow: 2px 5px 5px $one;
+    padding: 0.2rem; 
+    object-fit: cover;
+    object-position: center;
+}
+
+div.scrollmenu {
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.scrollmenu::-webkit-scrollbar {
+    display: none;
+}
+
+div.scrollmenu a {
+    border-radius: 20px;
+    width: 8rem;
+    border: solid 3px $two;
+    background-color: $two;
+    display: inline-block;
+    color: $one;
+    text-align: center;
+    padding: 0.5rem;
+    text-decoration: none;
+    margin: 1rem;
+}
+
+div.scrollmenu a:hover {
+    border-radius: 20px;
+    border: solid 3px $four;
+    background-color: $two;
+}
+
+.tilcaption {
+    background-image: url("../../public/pictures/det.jpg");
+    //background-image: linear-gradient(0deg,  transparent,  $one);
+    width: 100% auto;
+    height: 45rem;
+    max-width: 100%;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.tilcaption h1 {
+    max-width: 500px;
+    text-shadow: 2px 5px 5px $one;
+    color: $two;
+    font-size: 4.8rem;
+    font-weight: 700;
+    letter-spacing: .3rem;
+    position: absolute;
+    top: 35%;
+    left: 20%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Style Script', cursive;
+}
+
+.titles2 {
+    color: $one;
+    font-size: 2.8rem;
+    font-weight: 700;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.titles8 {
+    color: $tree;
+    position: absolute;
+    top: 55%;
+    left: 20%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 8rem;
+    border-radius: 20px;
+    border: solid 3px $two;
+}
+
+.titles3 {
+    color: $tree;
+    position: absolute;
+    top: 55%;
+    left: 25%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 8rem;
+    border-radius: 20px;
+    border: solid 3px $two;
+}
+
+.tblu {
+    background-color: $two;
+    border-radius: 20px;
+}
+
+.onec {
+    color: $one;
+}
+
+.twoc {
+    color: $two;
+}
+
+.treec {
+    color: $tree;
+}
+
+.fourc {
+    color: $four;
+}
+
+.eddt2,
+.eddt2:hover {
+    color: $one;
+    background-color: $four;
+    text-decoration: none;
+    border-radius: 30px;
+}
+
+#cont {
+    background-color: $one;
+}
+
+.wave {
+    width: 100% auto;
+    height: 5rem;
+    max-width: 100%;
+}
+
+.waveimg {
+    background-image: url("../../public/pictures/unnamed-2.jpg");
+    width: 100% auto;
+    height: 5rem;
+    max-width: 100%;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-size: 100% 5rem;
+    background-position: center;
+}
+
+//.allergen {
+//    min-width: 4rem;
+//    width: 4rem;
+//    height: 4rem;
+//}
+.pio {
+    min-width: 4rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+}
+
+.mio {
+    background-color: $four;
+}
+
+.tab {
+    background-color: $two;
+    color: $four;
+    border-radius: 20px;
+}
+
+.collapsible {
+    min-width: 50%;
+}
+
+.pok {
+    max-height: 0;
+    overflow: hidden;
+    max-width: 80%;
+    transition: max-height 0.2s ease-out;
+    color: brown;
+}
+
+.button {
+    background-color: $four;
+    border: none;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.try {
+    border-radius: 30px;
+    background-color: $two;
+}
+
+.pls {
+    width: 20px;
+    height: 20px;
+}
+
+.plss {
+    width: 25px;
+    height: 25px;
+}
+
+.plsbtt {
+    background-color: none;
+    border: none;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.inft {
+    color: $two;
+}
+
+footer {
+    background-color: $one;
+}
+
+.inftx {
+    color: black;
+}
+
+.split {
+    background-image: url("../../public/pictures/unnamed-2.jpg");
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    background-color: black;
+}
+
+.usrimg {
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+
+.rate:not(:checked)>input {
+    position: absolute;
+    top: -9999px;
+}
+
+.rate:not(:checked)>label {
+    float: right;
+    width: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 30px;
+    color: #ffc700;
+}
+
+.rate:not(:checked)>label:before {
+    content: '★ ';
+}
+
+.rate>input:checked~label {
+    color: #ffc700;
+}
+
+.rate:not(:checked)>label:hover,
+.rate:not(:checked)>label:hover~label {
+    color: #deb217;
+}
+
+.rate>input:checked+label:hover,
+.rate>input:checked+label:hover~label,
+.rate>input:checked~label:hover,
+.rate>input:checked~label:hover~label,
+.rate>label:hover~input:checked~label {
+    color: #c59b08;
+}
+
+.trans {
+    padding-top: 5rem;
+}
+
+.captionfilt {
+    background-image: url("../../public/pictures/filter.jpg");
+    width: 100% auto;
+    height: 45rem;
+    max-width: 100%;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.captionfilt h1 {
+    color: $two;
+    font-size: 4.8rem;
+    font-weight: 700;
+    letter-spacing: .3rem;
+    position: absolute;
+    top: 30%;
+    right: 15%;
+    margin-left: -50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Style Script', cursive;
+}
+
+.split2 {
+    background-image: linear-gradient(180deg, transparent, $one);
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+}
+
+.form-control {
+    border-radius: 30px;
+    border: solid 5px $four;
+    margin-top: .3rem;
+}
+
+.nsl5 {
+    padding-top: 8rem;
+}
+
+.usrs {
+    max-width: 80%;
+}
+
+.llimme {
+    text-shadow: 0px 0px 5px black;
+}
+
+.usrbtn a {
+    border-radius: 20px;
+    height: 3rem;
+    width: 14rem;
+    border: solid 3px $two;
+    background-color: $two;
+    display: inline-block;
+    color: $one;
+    text-align: center;
+    padding: 0.5rem;
+    text-decoration: none;
+    margin: 1rem;
+}
+
+.usrbtn a:hover {
+    border-radius: 20px;
+    border: solid 3px $four;
+    background-color: $two;
+}
+
+.usrbtn2 {
+    border-radius: 20px;
+    height: 3rem;
+    border: solid 3px $two;
+    background-color: $two;
+    display: inline-block;
+    color: $one;
+    text-align: center;
+    padding: 0.5rem;
+    text-decoration: none;
+    margin: 1rem;
+}
+
+.usrbtn3 {
+    width: 5rem;
+    border-radius: 20px;
+    border: solid 3px $two;
+    background-color: $two;
+    display: inline-block;
+    color: $one;
+    text-align: center;
+    padding: 0.2rem;
+    text-decoration: none;
+}
+
+.toop {
+    top: 10%;
+}
+
+.wdthb {
+    width: 10rem;
+}
+
+
+
+.weare {
+    color: $two;
+    font-size: 4.8rem;
+    font-weight: 300;
+    letter-spacing: .3rem; 
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Style Script', cursive;
+}
+
+.weare2 {
+    color: $four;
+    font-size: 2.0rem;
+    font-weight: 500;
+    letter-spacing: .3rem; 
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Style Script', cursive;
+    text-shadow: 0px 0px 5px rgb(105, 139, 104);
+}
+
+/*============ BOOTSTRAP BREAK POINTS:    
+Extra small (xs) devices (portrait phones, less than 576px)  
+No media query since this is the default in Bootstrap    
+
+Small (sm) devices (landscape phones, 576px and up)  
+@media (min-width: 576px) { ... }    
+
+Medium (md) devices (tablets, 768px and up)  
+@media (min-width: 768px) { ... }    
+
+Large (lg) devices (desktops, 992px and up)  
+@media (min-width: 992px) { ... }    
+
+Extra (xl) large devices (large desktops, 1200px and up)  
+@media (min-width: 1200px) { ... }    
+
+
+=============*/
+
+@media (max-width: 992px) {
+    .navbar-collapse {
+        position: absolute;
+        justify-content: center;
+        z-index: 10;
+        top: 100px;
+        width: 80%;
+        background-color: $four;
+        border-radius: 30px;
+    }
+    .collapse {
+        margin-left: 0rem;
+        margin-right: 0rem;
+    }
+    .mig {
+        width: 100%;
+    }
+    .lime {
+        justify-content: center;
+        border-radius: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        border: solid 3px $one;
+        background-color: $one;
+    }
+    .lime:hover,
+    .lime:active {
+        justify-content: center;
+        border-radius: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        border: solid 3px $tree;
+        background-color: $one;
+    }
+    .llimme {
+        justify-content: center;
+        border-radius: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        border: solid 3px $one;
+        background-color: $one;
+    }
+    .tilleft {
+        position: absolute;
+        top: 20%;
+        right: 50px;
+        border-radius: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .tilcaption {
+        background-image: none;
+        width: 100% auto;
+        height: 45rem;
+        max-width: 100%;
+        z-index: 1;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .usrbtn a {
+        border-radius: 20px;
+        width: 13rem;
+        height: 3rem;
+        border: solid 3px $two;
+        background-color: $two;
+        display: inline-block;
+        color: $one;
+        text-align: center;
+        padding: 0.5rem;
+        text-decoration: none;
+        margin: 1rem;
+    }
+    .usrbtn a:hover {
+        border-radius: 20px;
+        border: solid 3px $four;
+        background-color: $two;
+    }
+    .tilcaption h1 {
+        text-shadow: 2px 5px 5px $one;
+        color: $two;
+        font-size: 3.8rem;
+        font-weight: 700;
+        letter-spacing: .3rem;
+        position: absolute;
+        top: 65%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        font-family: 'Open Sans', sans-serif;
+        font-family: 'Style Script', cursive;
+    }
+    .tilleft {
+        width: 100%;
+        top: 20%;
+        right: 0;
+    }
+    .titimg {
+        width: 100%;
+        height: 17rem;
+    }
+    .soorc {
+        position: relative;
+        z-index: -1;
+        width: 100%;
+        height: 30rem;
+        top: -11rem;
+        border-radius: 0;
+        border: 0;
+        box-shadow: none;
+        padding: 0;
+        background-color: $one;
+        background-size: cover;
+    }
+    .titles8 {
+        color: $tree;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        width: 8rem;
+        border-radius: 20px;
+        border: solid 3px $two;
+    }
+    .titles2 {
+        color: $one;
+        font-size: 2.8rem;
+        font-weight: 700;
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+    }
+    .captionfilt h1 {
+        color: $two;
+        font-size: 4.8rem;
+        font-weight: 500;
+        letter-spacing: .1rem;
+        position: absolute;
+        top: 30%;
+        right: 5%;
+        margin-left: -10%;
+        transform: translate(-50%, -50%);
+        font-family: 'Open Sans', sans-serif;
+        font-family: 'Style Script', cursive;
+    }
+}
+
+.footertxt {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.zoom {
+    transition: transform .2s;
+}
+
+.zoom:hover {
+    transform: scale(1.5);
+}
+
+.bi-facebook:hover,
+.bi-twitter:hover,
+.bi-linkedin:hover {
+    color: #0d6efd;
+}
+
+.bi-google:hover,
+.bi-instagram:hover,
+.bi-pinterest:hover,
+.bi-youtube:hover {
+    color: #dc3545;
+}

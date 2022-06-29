@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+{% block title %}Jungle food{% endblock %}
+
+
+{% block body %}
+        {% include "components/navbar.html.twig" %}
+
+
+<div class="d-flex align-items-center split justify-content-center">
+   
+
+<main class="form-signin text-center">
+<div class="nsl"></div>
+<div class="nsl"></div>
+<div class="nsl"></div>
+<div class="nsl"></div>
+<div class="nsl"></div>
+<div class="nsl"></div>
+<div class="nsl"></div>
+<div class="nsl"></div>
+
+
+
+
+
+  <h1 class="h3 mb-3 fw-normal nsl">Create new Recipe</h1>
+
+  {{ include('recipes/_form.html.twig') }}
+
+
+
+  
+
+  <a class="nls nsl2 usrbtn2 wdthb" href="{{ path('app_recipes_index') }}">Back to list</a>
+
+
+
+
+
+
+</main>
+
+</div>
+{% endblock %}

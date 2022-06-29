@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Jungle food!{% endblock %}
+
+
+{% block body %}
+        {% include "components/navbar.html.twig" %}
+
+ 
+  <div class="captionfilt">
+    <div class="titles">
+    <h1 class="titles text-left">{{recipes.0.fktypes.name}}</h1> 
+    </div>
+  </div>
+
+  
+
+  <h1 class="text-center nsl ev">Recipes</h1>
+
+
+
+    <div class="container">
+       <h3>All</h3>
+    </div>
+
+    <div class="row d-flex justify-content-center">
+        {% for recipe in recipes %}
+        <div class="col-lg-4 col-md-6 col-sm-12 row justify-content-center">
+
+
+            <div class='boox2'>
+                <a href="/details/{{recipe.fkrecipes.id}}" class="btn eddt">
+                    <img class="im-size2"  src="{{asset('pictures/' ~ recipe.fkrecipes.picture)}}">
+                </a> 
+            </div>
+        
+            <div class='nsl2'></div>
+                <a href="/details/{{recipe.fkrecipes.id}}" class="btn eddt col-12 text-left">
+                    <h4 class="inft">{{recipe.fkrecipes.name}}</h4>
+                </a> 
+                
+                <a href="/details/{{recipe.fkrecipes.id}}" class="btn col-6">
+                    <p class="inftx">Time: {{recipe.fkrecipes.cookTime}}</p>
+                </a> 
+        </div>
+        {% endfor %}
+
+        
+    </div>
+
+
+{% endblock %}
+
+
+
+

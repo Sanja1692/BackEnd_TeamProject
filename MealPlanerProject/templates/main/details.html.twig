@@ -1,0 +1,186 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Jungle food!{% endblock %}
+
+{% block body %}
+        {% include "components/navbar.html.twig" %}
+
+  <div class="tilcaption">
+  
+    <h1 class="titles text-left">{{recipe.0.name}}</h1>
+    <div class="titles2 text-left">
+
+      <div class="rate">
+        <input type="radio" id="star5" name="rate" value="5" />
+        <label for="star5" title="text">5 stars</label>
+        <input type="radio" id="star4" name="rate" value="4" />
+        <label for="star4" title="text">4 stars</label>
+        <input type="radio" id="star3" name="rate" value="3" />
+        <label for="star3" title="text">3 stars</label>
+        <input type="radio" id="star2" name="rate" value="2" />
+        <label for="star2" title="text">2 stars</label>
+        <input type="radio" id="star1" name="rate" value="1" />
+        <label for="star1" title="text">1 star</label>
+      </div>
+    
+    </div>  
+    <h5 class="titles8 text-center">Time: {{recipe.0.cookTime}} min</h5>
+    
+    
+    <div class="tilleft">
+      <div class="tilimg">
+        <img class="soorc" src="{{asset('pictures/' ~ recipe.0.picture)}}">
+      </div>
+    </div>
+     
+  </div>
+  
+
+  
+  <div class="container">
+    <div class="row justify-content-center  nsl">
+      <div class="col-12 justify-content-center d-flex nsl nsl2">
+      {% if is_granted("ROLE_USER") %}
+        <a href="/" class="btn eddt2" data-bs-toggle="modal" data-bs-target="#text">
+            Add to your week plan
+        </a>
+      {% endif %} 
+      
+      </div>
+      <div class="col-6">
+        <h3 class="onec">What you need<h3>
+{% for ingredient in ingredients %}
+        <h6>{{ingredient.qty}} {{ingredient.unitname}} {{ingredient.name}}</h6> 
+{% endfor %}
+      
+      </div>
+      <div class="col-6">
+        <h3 class="onec">How make<h3>
+        <h6>{{recipe.0.description}}</h6> 
+      
+      </div>
+    </div>
+
+
+  </div>
+
+  <div id="cont">
+    <div class="wave">
+      <div class="waveimg"></div>
+    </div>
+    <div class="nsl"></div>
+
+    <div class="container">
+      <div class="row justify-content-center ">
+        <h3 class="text-center">Allergens</h3>
+
+
+
+        <div class="row nsl nsl2 d-flex">
+          <div class="col-12">
+            <div class="row justify-content-center ">
+            {% for allergen in allergens %}
+              <div class="col-2 justify-content-center d-flex">
+                <div class="allergen">
+                  <img class="pio" src="{{asset('pictures/' ~ allergen.fkallergens.picture)}}"> 
+                </div>
+              </div>
+                
+             {% endfor %}
+              
+              
+              
+
+            </div>
+
+          </div>
+
+
+
+          
+        </div>
+
+        <h3 class="text-center">Nutrients Table</h3>
+
+        <div class="row nsl nsl2 d-flex justify-content-center">
+          <div class="col-lg-6 col-md-12 tab nsl">
+            <div class=" d-flex bd-highlight mb-3">
+              <h6 class="p-2 bd-highlight">Protein</h6>
+              <h6 class="ms-auto p-2 bd-highlight">{{recipe.0.protein}}</h6>
+            </div>
+            <hr>
+            <div class=" d-flex bd-highlight mb-3">
+              <h6 class="p-2 bd-highlight">Calories</h6>
+              <h6 class="ms-auto p-2 bd-highlight">{{recipe.0.calories}}</h6>
+            </div>
+            <hr>
+            <div class=" d-flex bd-highlight mb-3">
+              <h6 class="p-2 bd-highlight">Carbohydrates</h6>
+              <h6 class="ms-auto p-2 bd-highlight">{{recipe.0.carbohydrates}}</h6>
+            </div>
+            <hr>
+            <div class=" d-flex bd-highlight mb-3">
+              <h6 class="p-2 bd-highlight">Fat</h6>
+              <h6 class="ms-auto p-2 bd-highlight">{{recipe.0.fat}}</h6>
+            </div>
+          </div>
+        </div>
+
+
+      
+      </div>
+    </div>
+
+  </div>
+  
+  <div class="container">
+
+    <div class="justify-content-center nsl row">
+    <button type="button" class="collapsible justify-content-center col-12 button holl text-danger">Shopping</button>
+
+
+    <div class="pok nsl row justify-content-center">
+      <div class="col-lg-8 col-md-12 col-sm-12 try nsl">
+        {% for ingredient in ingredients %}
+            <div class=" d-flex bd-highlight mb-3">
+                <a href="#" class="btn">
+                    <h4 class="treec">
+            {{ingredient.name}}
+
+                      <img class="pls" src="{{ asset('pictures/668115.png') }}">
+                    </h4>
+                </a> 
+            </div>
+        {% endfor %}
+      </div>
+      
+
+    </div>
+
+        
+    </div>
+
+
+    
+  </div>
+  <div class="nsl"></div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="text" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add Recipe to your Planner</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        {{form_start(form)}}
+        {{form_widget(form)}}
+        {{form_end(form)}}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

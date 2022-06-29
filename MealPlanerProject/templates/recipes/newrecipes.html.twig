@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Jungle food!{% endblock %}
+
+
+{% block body %}
+        {% include "components/navbar.html.twig" %}
+
+ 
+  <div class="caption">
+    <div class="titles">
+    
+    <h5 class="titles text-left">Recipes</h5>
+    </div>
+  </div>
+
+  <div class="container">
+    
+    <div class="row justify-content-center">
+    <div class="col-12">
+    <h1 class="text-center nsl ev lnko"><a class="lnko" href="{{ path('app_recipes_new') }}">Create new</a></h1>
+    </div>
+   </div>
+
+
+  <h1 class="text-center nsl ev">Recipes</h1>
+
+
+
+    <div class="container">
+       <h3>All</h3>
+    </div>
+
+    <div class="row d-flex justify-content-center">
+        {% for recipe in recipes %}
+        <div class="col-lg-4 col-md-6 col-sm-12 row justify-content-center">
+
+
+            <div class='boox2'>
+                <a href="{{ path('app_recipes_show', {'id': recipe.id}) }}" class="btn eddt">
+                    <img class="im-size2"  src="{{asset('pictures/' ~ recipe.picture)}}">
+                </a> 
+            </div>
+        
+            <div class='nsl2'></div>
+            
+                <a href="{{ path('app_recipes_show', {'id': recipe.id}) }}" class="btn eddt col-12 text-left">
+                    <h4 class="inft">{{recipe.name}}</h4>
+                </a> 
+                <a href="" class="btn col-6">
+                    {{ include('recipes/_delete_form.html.twig') }}
+                    
+                    
+                </a> 
+                <a href="{{ path('app_recipes_edit', {'id': recipe.id}) }}" class="btn col-6">
+                   
+                    <h1 class="lnko">Edit</h1>
+                </a> 
+        </div>
+        {% endfor %}
+
+        
+    </div>
+
+
+{% endblock %}
+
+
+
+

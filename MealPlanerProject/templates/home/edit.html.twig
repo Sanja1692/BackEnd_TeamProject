@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit{% endblock %}
+
+
+{% block body %}
+        {% include "components/navbar.html.twig" %}
+
+
+<div class="d-flex align-items-center split justify-content-center">
+   
+
+<main class="form-signin text-center">
+
+   <h2 class="page-header">Edit Plan</h2>
+   {{form_start(form)}}
+   {{form_widget(form)}}
+   {{form_end(form)}}
+
+
+
+
+</main>
+
+</div>
+{% endblock %}

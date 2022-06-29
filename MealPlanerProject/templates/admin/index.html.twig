@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Jungle food!{% endblock %}
+
+
+{% block body %}
+        {% include "components/navbar.html.twig" %}
+
+ 
+  <div class="captionfilt">
+    <div class="titles">
+    <h1 class="titles text-left">Hallo Admin</h1> 
+    </div>
+  </div>
+
+  <div class="container">
+    
+    <div class="row justify-content-center">
+    <div class="col-12">
+        <h1 class="text-center nsl ev lnko"><a class="lnko" href="/logout"> Log Out </a></h1>
+    </div>
+    
+
+    <div class="col-4">
+        <h1 class="text-center nsl ev lnko"><a class="lnko" href="/admin/recipes"> Recipes </a></h1>
+    </div>
+    <div class="col-4">
+        <h1 class="text-center nsl ev lnko"><a class="lnko" href="/admin/users"> Users </a></h1>
+    </div>
+
+    </div> 
+
+  </div>
+
+
+
+
+
+
+
+
+
+{% endblock %}
+
+
+
+
